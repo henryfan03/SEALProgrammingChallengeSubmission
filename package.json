@@ -1,7 +1,7 @@
 {
   "name": "SEALProgrammingChallengeSubmission",
   "version": "1.0.0",
-  "description": "",
+  "description": "WebDev Application for handling public file viewing and uploading",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/henryfan03/SEALProgrammingChallengeSubmission.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Henry Fan",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/henryfan03/SEALProgrammingChallengeSubmission/issues"
