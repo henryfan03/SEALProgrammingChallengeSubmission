@@ -3,7 +3,9 @@ import './App.css';
 
 const App = () => (
   <div className="App">
-    app
+  <h1>
+    SEAL Programming Challenge: File Upload & Viewing
+  </h1>
   </div>
 );
 
