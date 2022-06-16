@@ -2,10 +2,10 @@ import React from 'react';
 import './App.css';
 
 const App = () => (
-  <div className="App">
-  <h1>
-    SEAL Programming Challenge: File Upload & Viewing
-  </h1>
+  <div className='container mt-4'>
+    <h4 className='display-4 text-center mb-4'>
+      <i className='fab fa-react' /> SEAL Programming Challenge
+    </h4>
   </div>
 );
 
