@@ -1,13 +1,27 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState} from 'react';
 
 const FileUpload = () => {
+  const [file, setFile] = useState('');
+  const [filename, setFilename] = useState('Select a file');
+
+  const onChange = e => {
+    setFile(e.target.files[0]);
+    setFilename(e.target.files[0].name);
+  };
+
+  const onSubmit = e => {
+    e.preventDefault();
+    const formData = new FormData();
+    formData.append("file");
+  }
+
   return (
     <Fragment>
-      <form>
+      <form onSubmit={onSubmit}>
         <div className="custom-file mb-4">
-          <input type="file" className="custom-file-input" id="customFile"/>
+          <input type="file" className="custom-file-input" id="customFile" onChange={onChange}/>
           <label className="custom-file-label" htmlFor="customFile">
-            Select a file
+            {filename}
           </label>
         </div>
 
