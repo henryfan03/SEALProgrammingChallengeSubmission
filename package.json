@@ -4,7 +4,10 @@
   "description": "WebDev Application for handling public file viewing and uploading",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -18,17 +21,12 @@
   },
   "homepage": "https://github.com/henryfan03/SEALProgrammingChallengeSubmission#readme",
   "dependencies": {
+    "axios": "^0.27.2",
     "express": "^4.18.1",
     "express-fileupload": "^1.4.0"
   },
   "devDependencies": {
     "concurrently": "^7.2.1",
     "nodemon": "^2.0.16"
-  },
-  "scripts": {
-    "start": "node server.js",
-    "server": "nodemon server.js",
-    "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
   }
 }
