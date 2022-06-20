@@ -1,11 +1,11 @@
 import React from 'react';
-import FileUpload from './FileUpload';
+import FileUpload from './components/FileUpload';
 import './App.css';
 
 const App = () => (
   <div className='container mt-4'>
     <h4 className='display-4 text-center mb-4'>
-      &#128193; SEAL Programming Challenge
+      <span>&#128193;</span> SEAL Programming Challenge
     </h4>
     <FileUpload />
   </div>

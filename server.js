@@ -20,6 +20,7 @@ app.post('/upload', (req, res) => {
     }
 
     res.json({ fileName: file.name, filePath: `/uploads/${file.name}` });
+    console.log(res);
   });
 });
 
