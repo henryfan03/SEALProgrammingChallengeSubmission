@@ -8,7 +8,7 @@ app.use(fileUpload());
 // Upload Endpoint
 app.post('/upload', (req, res) => {
   if (req.files === null) {
-    return res.status(400).json({ msg: 'No files were uploaded'});
+    return res.status(400).json({ msg: 'No file uploaded' });
   }
 
   const file = req.files.file;
@@ -20,8 +20,7 @@ app.post('/upload', (req, res) => {
     }
 
     res.json({ fileName: file.name, filePath: `/uploads/${file.name}` });
-    console.log(res);
   });
 });
 
-app.listen(5000, () => console.log('listening on port 5000'));
+app.listen(5000, () => console.log('Server Started...'));
