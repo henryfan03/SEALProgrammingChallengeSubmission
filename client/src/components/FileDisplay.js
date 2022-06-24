@@ -4,6 +4,6 @@ import axios from 'axios';
 
 const FileDisplay = () {
 
-}
+};
 
 export default FileDisplay;
