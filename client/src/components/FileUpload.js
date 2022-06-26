@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import Message from './Message';
 import Progress from './Progress';
+import FileDisplay from './FileDisplay';
 import axios from 'axios';
 
 const FileUpload = () => {
@@ -19,7 +20,7 @@ const FileUpload = () => {
     e.preventDefault();
     const formData = new FormData();
     formData.append('file', file);
-
+    //FileDisplay();
     try {
       const res = await axios.post('/upload', formData, {
         headers: {
