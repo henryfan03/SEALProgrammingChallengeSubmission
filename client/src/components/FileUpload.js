@@ -74,7 +74,7 @@ const FileUpload = () => {
         <input
           type='submit'
           value='Upload'
-          className='btn btn-primary btn-block mt-4'
+          className='btn btn-danger btn-block mt-4'
         />
       </form>
       {uploadedFile ? (
