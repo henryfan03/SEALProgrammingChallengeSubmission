@@ -1,14 +1,14 @@
 import React from 'react';
 import FileUpload from './components/FileUpload';
-import FileDisplay from './components/FileDisplay';
 import './App.css';
 
-const Gallery = () => (
+const Main = () => (
   <div className='container mt-4'>
     <h4 className='display-4 text-center mb-4'>
-      File Upload Gallery
+      &#128193; SEAL Programming Challenge
     </h4>
+    <FileUpload />
   </div>
 );
 
-export default Gallery;
+export default Main;

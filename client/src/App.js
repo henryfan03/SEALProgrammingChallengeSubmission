@@ -1,14 +1,20 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React from 'react';
-import FileUpload from './components/FileUpload';
+import Main from './Main';
+import Gallery from './Gallery';
 import './App.css';
 
-const App = () => (
-  <div className='container mt-4'>
-    <h4 className='display-4 text-center mb-4'>
-      &#128193; SEAL Programming Challenge
-    </h4>
-    <FileUpload />
-  </div>
-);
+const App = () => {
+  return (
+    <>
+      <Router>
+        <Routes>
+            <Route path='/' element={<Main/>}/>
+            // <Route path='/gallery' element={<Gallery/>}/>
+        </Routes>
+      </Router>
+    </>
+  );
+}
 
 export default App;
