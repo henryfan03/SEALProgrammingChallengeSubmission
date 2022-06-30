@@ -1,5 +1,6 @@
-import React, { Fragment, useState } from 'react';
+import React from 'react';
 import FileUpload from './FileUpload';
+import { motion } from 'framer-motion';
 import fs from 'fs';
 import axios from 'axios';
 
