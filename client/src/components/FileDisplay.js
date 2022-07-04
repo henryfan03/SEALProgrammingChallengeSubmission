@@ -1,17 +1,28 @@
 import React from 'react';
 import FileUpload from './FileUpload';
-import Carousel from 'react-responsive-carousel';
+import Carousel from 'better-react-carousel';
 import { motion } from 'framer-motion';
 import fs from 'fs';
 import axios from 'axios';
 
 const FileDisplay = () => {
-const dir = fs.opendirSync();
-  let dirent;
-  while ((dirent = dir.readSync()) !== null) {
-    console.log(dirent.name);
-  }
-  dir.closeSync();
+  return (
+    <Carousel cols={2} rows={1} gap={10} loop>
+      <Carousel.Item>
+        <img width="100%" src="https://picsum.photos/800/600?random=1" />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img width="100%" src="https://picsum.photos/800/600?random=2" />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img width="100%" src="https://picsum.photos/800/600?random=3" />
+      </Carousel.Item>
+      <Carousel.Item>
+        {/* anything you want to show in the grid */}
+      </Carousel.Item>
+      {/* ... */}
+    </Carousel>
+  )
 };
 
 export default FileDisplay;
