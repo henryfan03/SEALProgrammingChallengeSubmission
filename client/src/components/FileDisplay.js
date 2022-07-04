@@ -1,7 +1,6 @@
 import React from 'react';
 import FileUpload from './FileUpload';
 import Carousel from 'better-react-carousel';
-import { motion } from 'framer-motion';
 import fs from 'fs';
 import axios from 'axios';
 
