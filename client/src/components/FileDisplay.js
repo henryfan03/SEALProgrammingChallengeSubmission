@@ -8,7 +8,7 @@ const FileDisplay = () => {
   return (
     <Carousel cols={2} rows={1} gap={10} loop>
       <Carousel.Item>
-        <img width="100%" src="https://picsum.photos/800/600?random=1" />
+        <img width="100%" src="./client/public/thumbnails/icontxt.png" />
       </Carousel.Item>
       <Carousel.Item>
         <img width="100%" src="https://picsum.photos/800/600?random=2" />
