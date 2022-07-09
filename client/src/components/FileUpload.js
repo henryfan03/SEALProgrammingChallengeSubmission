@@ -38,10 +38,13 @@ const FileUpload = () => {
         }
       });
 
+      console.log(String(filename));
+
       // Clear percentage
       setTimeout(() => setUploadPercentage(0), 10000);
 
       const { fileName, filePath } = res.data;
+
 
       setUploadedFile({ fileName, filePath });
 
