@@ -1,5 +1,6 @@
 const express = require('express');
 const fileUpload = require('express-fileupload');
+let logs = require('./logs')
 
 const app = express();
 
@@ -20,6 +21,9 @@ app.post('/upload', (req, res) => {
     }
 
     res.json({ fileName: file.name, filePath: `/uploads/${file.name}` });
+    let currentDate = new Date().toISOString().slice(0, 10)
+    logs.writeFile("Filename : " + String(file.name) + " Uploaded on: " + currentDate)
+
   });
 });
 
