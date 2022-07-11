@@ -1,13 +1,20 @@
 const fs = require('fs');
 const express = require('express');
 
-function logFile({fileName}) {
+function logFile(fileName) {
   fs.readFile('./logs.json', 'utf8', function readFileCallback(err, data){
     if (err){
         console.log(err);
     } else {
 
-    entry = JSON.parse(data); //now it an object
+    try {
+      entry = JSON.parse(data);
+    }
+    catch {
+      var entry = {
+         table: []
+      };
+    }
 
     let uploadTime = new Date().toLocaleDateString()
 
