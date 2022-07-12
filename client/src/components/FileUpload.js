@@ -3,6 +3,7 @@ import Message from './Message';
 import Progress from './Progress';
 import FileDisplay from './FileDisplay';
 import axios from 'axios';
+// var FileHandler = require('./FileHandler')
 
 const FileUpload = () => {
   const [file, setFile] = useState('');
@@ -38,7 +39,7 @@ const FileUpload = () => {
         }
       });
 
-      console.log(String(filename));
+      // console.log(FileHandler(fileName));
 
       // Clear percentage
       setTimeout(() => setUploadPercentage(0), 10000);
