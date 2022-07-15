@@ -1,6 +1,16 @@
 const fs = require('fs');
 const express = require('express');
 
+// For todays date;
+Date.prototype.today = function () {
+    return ((this.getDate() < 10)?"0":"") + this.getDate() +"/"+(((this.getMonth()+1) < 10)?"0":"") + (this.getMonth()+1) +"/"+ this.getFullYear();
+}
+
+// For the time now
+Date.prototype.timeNow = function () {
+     return ((this.getHours() < 10)?"0":"") + this.getHours() +":"+ ((this.getMinutes() < 10)?"0":"") + this.getMinutes() +":"+ ((this.getSeconds() < 10)?"0":"") + this.getSeconds();
+}
+
 function logFile(fileName) {
   fs.readFile('./logs.json', 'utf8', function readFileCallback(err, data){
     if (err){
@@ -12,11 +22,11 @@ function logFile(fileName) {
     }
     catch {
       var entry = {
-         table: []
+         uploadedFiles: []
       };
     }
 
-    let uploadTime = new Date().toLocaleDateString()
+    let uploadTime = new Date().today() + " " + new Date().timeNow();
 
     entry.table.push({filename: fileName, uploadtime: uploadTime});
 
