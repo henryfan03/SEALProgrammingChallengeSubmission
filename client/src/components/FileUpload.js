@@ -2,8 +2,9 @@ import React, { Fragment, useState } from 'react';
 import Message from './Message';
 import Progress from './Progress';
 import FileDisplay from './FileDisplay';
+import fs from 'fs';
 import axios from 'axios';
-// var FileHandler = require('./FileHandler')
+import FileHandler from './FileHandler';
 
 const FileUpload = () => {
   const [file, setFile] = useState('');
@@ -39,6 +40,7 @@ const FileUpload = () => {
         }
       });
 
+      FileHandler();
       // console.log(FileHandler(fileName));
 
       // Clear percentage

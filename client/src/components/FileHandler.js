@@ -1,7 +1,9 @@
-// import React from 'react';
-//
-// function FileHandler(filename) {
-//   return filename.slice(filename.length-3,filename.length);
-// };
-//
-// export FileHandler();
+import React from 'react';
+import fs from 'fs';
+
+const FileHandler = () => {
+  var files = fs.readdirSync('./client/public/uploads/');
+  console.log(files);
+};
+
+export default FileHandler;
