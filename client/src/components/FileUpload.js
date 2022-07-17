@@ -4,7 +4,7 @@ import Progress from './Progress';
 import FileDisplay from './FileDisplay';
 import fs from 'fs';
 import axios from 'axios';
-import FileHandler from './FileHandler';
+//import FileHandler from './FileHandler';
 
 const FileUpload = () => {
   const [file, setFile] = useState('');
@@ -40,7 +40,6 @@ const FileUpload = () => {
         }
       });
 
-      FileHandler();
       // console.log(FileHandler(fileName));
 
       // Clear percentage
@@ -59,6 +58,7 @@ const FileUpload = () => {
         setMessage(err.response.data.msg);
       }
       setUploadPercentage(0)
+      //FileHandler();
     }
   };
 
