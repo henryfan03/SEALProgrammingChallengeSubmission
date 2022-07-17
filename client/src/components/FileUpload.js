@@ -4,7 +4,7 @@ import Progress from './Progress';
 import FileDisplay from './FileDisplay';
 import fs from 'fs';
 import axios from 'axios';
-//import FileHandler from './FileHandler';
+import FileHandler from './FileHandler';
 
 const FileUpload = () => {
   const [file, setFile] = useState('');
@@ -50,6 +50,7 @@ const FileUpload = () => {
 
       setUploadedFile({ fileName, filePath });
 
+
       setMessage('File Uploaded');
     } catch (err) {
       if (err.response.status === 500) {
@@ -58,8 +59,8 @@ const FileUpload = () => {
         setMessage(err.response.data.msg);
       }
       setUploadPercentage(0)
-      //FileHandler();
     }
+    console.log(FileHandler());
   };
 
   return (
