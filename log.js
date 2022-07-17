@@ -28,7 +28,7 @@ function logFile(fileName) {
 
     let uploadTime = new Date().today() + " " + new Date().timeNow();
 
-    entry.table.push({filename: fileName, uploadtime: uploadTime});
+    entry.uploadedFiles.push({filename: fileName, uploadtime: uploadTime});
 
     json = JSON.stringify(entry);
 
